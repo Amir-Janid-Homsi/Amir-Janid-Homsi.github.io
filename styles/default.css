@@ -14,8 +14,10 @@ h1
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
+    margin-top: 32px;
+    margin-bottom: 16px;
 }
-h1, h2, h3
+h2, h3
 {
     margin-top: 32px;
     margin-bottom: 16px;
