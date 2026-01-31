@@ -43,7 +43,7 @@ footer
     color: #fffffa;
 }
 footer a {
-    display: block;
+    display: block !important;
     margin-bottom: 8px;
 }
 a

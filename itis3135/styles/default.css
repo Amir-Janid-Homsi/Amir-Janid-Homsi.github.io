@@ -41,7 +41,7 @@ footer
     color: #eae6e5;
 }
 footer a {
-    display: block;
+    display: block !important;
     margin-bottom: 8px;
 }
 a
