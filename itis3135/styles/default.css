@@ -1,0 +1,50 @@
+body {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 17px;
+    background-color: #eae6e5;
+    color: #04080f;
+}
+h1
+{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+h1, h2, h3
+{
+    margin-top: 32px;
+    margin-bottom: 16px;
+
+}
+p, ul
+{
+    margin-bottom: 16px;
+}
+main
+{
+    max-width: 900px;
+    margin: 0 auto;
+}
+header
+{
+    background-color: #04080f;
+    color: #eae6e5;
+}
+footer
+{
+    background-color: #757083;
+    color: #eae6e5;
+}
+a
+{
+    color: #00b9ae;
+}
+
+header, footer
+{
+    padding: 32px;
+}
+

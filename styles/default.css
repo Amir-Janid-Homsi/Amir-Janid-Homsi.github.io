@@ -1,0 +1,50 @@
+body
+{
+    font-family: "Source Sans 3", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    padding: 16px;
+    background-color: #fffffa;
+    color: #7e7f83;
+}
+h1
+{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+h1, h2, h3
+{
+    margin-top: 32px;
+    margin-bottom: 16px;
+
+}
+p, ul
+{
+    margin-bottom: 16px;
+}
+main
+{
+    max-width: 900px;
+    margin: 0 auto;
+}
+header
+{
+    background-color: #092327;
+    color: #ddf0ff;
+}
+footer
+{
+    background-color: #092327;
+    color: #fffffa;
+}
+a
+{
+    color: #e71d36;
+}
+header, footer
+{
+    padding: 32px;
+}
