@@ -40,6 +40,10 @@ footer
     background-color: #757083;
     color: #eae6e5;
 }
+footer a {
+    display: block;
+    margin-bottom: 8px;
+}
 a
 {
     color: #00b9ae;

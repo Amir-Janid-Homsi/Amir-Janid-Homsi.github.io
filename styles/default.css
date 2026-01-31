@@ -42,6 +42,10 @@ footer
     background-color: #092327;
     color: #fffffa;
 }
+footer a {
+    display: block;
+    margin-bottom: 8px;
+}
 a
 {
     color: #e71d36;
