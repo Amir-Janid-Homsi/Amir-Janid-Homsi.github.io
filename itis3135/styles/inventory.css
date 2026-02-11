@@ -23,15 +23,12 @@ h1 {
     margin-top: 24px;
 }
 
-
-
 table {
     border-collapse: collapse;
     background-color: #f7f5f4;
     border: 2px solid #757083;
     border-radius: 8px;
 }
-
 
 thead {
     background-color: #757083;
@@ -106,5 +103,3 @@ tr.in-progress {
 .rate[data-rate="three"] span {
     background-color: #00b9ae;
 }
-
-
