@@ -93,15 +93,16 @@ tr.in-progress {
 }
 
 .rate span {
-    height: 14px;
-    width: 14px;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     background-color: #d6d3d2;
+    flex: 0 0 14px;
 }
 
-.rate.one span:nth-child(1),
-.rate.two span:nth-child(-n+2),
-.rate.three span {
+.rate[data-rate="one"] span:nth-child(1),
+.rate[data-rate="two"] span:nth-child(-n+2),
+.rate[data-rate="three"] span {
     background-color: #00b9ae;
 }
+
 
