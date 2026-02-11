@@ -1,0 +1,107 @@
+body {
+    background-color: #eae6e5;
+    color: #04080f;
+    font-family: "Inter", sans-serif;
+    padding: 17px;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    margin-top: 32px;
+    margin-bottom: 16px;
+    color: #04080f;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin-top: 24px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #f7f5f4;
+    border: 2px solid #757083;
+    border-radius: 8px;
+}
+
+thead {
+    background-color: #757083;
+    color: #eae6e5;
+}
+
+th {
+    padding: 14px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    text-align: left;
+    font-size: 1rem;
+}
+
+td {
+    padding: 12px;
+    border-top: 1px solid #c8c4c3;
+    font-size: 0.95rem;
+}
+
+tr.read {
+    background-color: rgba(0, 185, 174, 0.15);
+}
+
+tr.to-read {
+    background-color: rgba(4, 8, 15, 0.05);
+}
+
+tr.in-progress {
+    background-color: rgba(255, 174, 66, 0.15);
+}
+
+.status {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #04080f;
+}
+
+.read .status {
+    background-color: rgba(0, 185, 174, 0.25);
+    border: 1px solid #00b9ae;
+}
+
+.to-read .status {
+    background-color: rgba(117, 112, 131, 0.25);
+    border: 1px solid #757083;
+}
+
+.in-progress .status {
+    background-color: rgba(255, 174, 66, 0.25);
+    border: 1px solid #ffae42;
+}
+
+.rate {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+.rate span {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    background-color: #d6d3d2;
+}
+
+.rate.one span:nth-child(1),
+.rate.two span:nth-child(-n+2),
+.rate.three span {
+    background-color: #00b9ae;
+}
+

@@ -1,22 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amir Homsi's (is an) Ascended Human | ITIS3135 | Course Website</title>
+    <meta charset="utf-8" />
+    <title>Book Inventory</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/default.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/inventory.css">
   </head>
+
   <body>
     <div data-include="components/header.html"></div>
+
     <main>
-      <h2>Inventory Page</h2>
-      <p>More to come!</p>
+      <h1>Book Inventory</h1>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Status</th>
+              <th>Rate</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr class="in-progress">
+              <td>1984</td>
+              <td>George Orwell</td>
+              <td>Dystopian Fiction</td>
+              <td><span class="status">In Progress</span></td>
+              <td>
+                <span class="rate three">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr class="read">
+              <td>Fahrenheit 451</td>
+              <td>Ray Bradbury</td>
+              <td>Dystopian Fiction</td>
+              <td><span class="status">Read</span></td>
+              <td>
+                <span class="rate two">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr class="to-read">
+              <td>The Handmaid's Tale</td>
+              <td>Margaret Atwood</td>
+              <td>Dystopian Fiction</td>
+              <td><span class="status">To Read</span></td>
+              <td>
+                <span class="rate one">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr class="to-read">
+              <td>Berserk</td>
+              <td>Kentaro Miura</td>
+              <td>Dark Fantasy Manga</td>
+              <td><span class="status">To Read</span></td>
+              <td>
+                <span class="rate three">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr class="read">
+              <td>JoJo's Bizarre Adventure</td>
+              <td>Hirohiko Araki</td>
+              <td>Action/Adventure Manga</td>
+              <td><span class="status">Read</span></td>
+              <td>
+                <span class="rate three">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr class="in-progress">
+              <td>One Piece</td>
+              <td>Eiichiro Oda</td>
+              <td>Adventure Manga</td>
+              <td><span class="status">In Progress</span></td>
+              <td>
+                <span class="rate two">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+            <tr class="read">
+              <td>Dragon Ball</td>
+              <td>Akira Toriyama</td>
+              <td>Shōnen Manga</td>
+              <td><span class="status">Read</span></td>
+              <td>
+                <span class="rate one">
+                  <span></span><span></span><span></span>
+                </span>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
   </body>
 </html>
+
