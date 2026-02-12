@@ -10,6 +10,15 @@ main {
     margin: 0 auto;
 }
 
+.page-intro {
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #04080f;
+}
+
+
 h1 {
     font-family: "Ubuntu", sans-serif;
     font-weight: 700;
