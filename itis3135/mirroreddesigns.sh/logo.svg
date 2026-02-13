@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="260" viewBox="0 0 200 260">
+    <!-- Optional background (remove if you want transparency) -->
+    <rect width="200" height="260" fill="#d0cdd7" />
+
+    <!-- Outer ornate-ish frame -->
+    <ellipse cx="100" cy="110" rx="70" ry="95" fill="#235789" />
+
+    <!-- Inner dark bevel -->
+    <ellipse cx="100" cy="110" rx="60" ry="85" fill="#210203" />
+
+    <!-- Mirror glass -->
+    <ellipse cx="100" cy="110" rx="52" ry="75" fill="#f4f4f8" />
+
+    <!-- Reflection streak (fantasy-style curve) -->
+    <path d="M70 55 Q110 75 125 115 Q110 100 80 130"
+          fill="none"
+          stroke="#d0cdd7"
+          stroke-width="6"
+          stroke-linecap="round" />
+
+    <!-- Subtle secondary shine -->
+    <path d="M85 40 Q105 60 115 95"
+          fill="none"
+          stroke="#14bdeb"
+          stroke-width="3"
+          stroke-linecap="round"
+          opacity="0.6" />
+
+    <!-- Stand top -->
+    <rect x="70" y="185" width="60" height="10" fill="#235789" rx="3" />
+
+    <!-- Stand base -->
+    <rect x="50" y="195" width="100" height="15" fill="#210203" rx="4" />
+
+    <!-- Accent line under base -->
+    <rect x="40" y="212" width="120" height="4" fill="#14bdeb" />
+</svg>
