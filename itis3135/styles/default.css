@@ -32,26 +32,26 @@ main {
 
 header {
     background-color: #04080f;
-    color: #f5f3f2; /* slightly lighter for contrast */
+    color: #f7f5f4; /* slightly lighter for perfect contrast */
 }
 
 footer {
-    background-color: #5a5d68; /* darker than #757083 for contrast */
-    color: #ffffff; /* pure white for contrast */
+    background-color: #4a4d57; /* darker than before to pass WCAG */
+    color: #ffffff; /* pure white for max contrast */
 }
 
 footer a {
     display: block;
     margin-bottom: 8px;
-    color: #cce7ff; /* accessible link color */
+    color: #d6eaff; /* high-contrast link color */
 }
 
 a {
-    color: #007a73; /* darker teal for contrast */
+    color: #006b63; /* darker teal for contrast */
 }
 
 a:hover {
-    color: #00514c;
+    color: #00423d;
 }
 
 header, footer {
