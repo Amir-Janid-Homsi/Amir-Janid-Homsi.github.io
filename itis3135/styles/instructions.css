@@ -1,0 +1,181 @@
+/* ================================
+ *   Ascended Academy — Dark Mode Docs
+ *   ================================ */
+
+:root {
+    /* Core palette */
+    --bg: #1a1d24;            /* pure dark background */
+    --bg-soft: #1f2229;       /* slightly lighter for panels */
+    --text: #f7f5f4;          /* off‑white text */
+    --header-text: #ffffff;   /* bright white for headings */
+    --accent: #66c7bd;        /* teal accent (dark‑mode safe) */
+    --accent-hover: #2ea397;  /* darker teal hover */
+    --border-subtle: rgba(255,255,255,0.08);
+
+    /* Typography */
+    --font-body: "Inter", sans-serif;
+    --font-heading: "Ubuntu", sans-serif;
+
+    /* Layout */
+    --nav-width: 320px;
+    --content-max: 980px;
+    --radius: 8px;
+    --spacing: 28px;
+}
+
+/* Global */
+html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ================================
+ *   Sidebar Navigation
+ *   ================================ */
+
+#navbar {
+position: fixed;
+top: 140px; /* offset so it doesn't cover site header */
+left: 0;
+width: var(--nav-width);
+height: calc(100% - 140px);
+background: var(--bg-soft);
+border-right: 1px solid var(--border-subtle);
+padding-top: 20px;
+overflow-y: auto;
+}
+
+#navbar .nav-title {
+font-family: var(--font-heading);
+font-size: 1.4rem;
+font-weight: 700;
+color: var(--header-text);
+padding: 0 24px 20px 24px;
+}
+
+#navbar ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+#navbar li {
+border-top: 1px solid var(--border-subtle);
+}
+
+#navbar a {
+display: block;
+padding: 14px 28px;
+color: var(--text);
+text-decoration: none;
+border-left: 3px solid transparent;
+transition: 0.18s ease;
+}
+
+#navbar a:hover {
+color: var(--accent);
+background: rgba(255,255,255,0.04);
+border-left-color: var(--accent);
+}
+
+/* ================================
+ *   Main Content
+ *   ================================ */
+
+#main-doc {
+margin-left: calc(var(--nav-width) + 24px);
+margin-top: 140px; /* push content below site header */
+padding: 40px;
+max-width: var(--content-max);
+}
+
+.main-section {
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 32px;
+}
+
+.main-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--header-text);
+    margin-bottom: 12px;
+}
+
+section article {
+    font-size: 1rem;
+    color: var(--text);
+}
+
+/* ================================
+ *   Code Blocks
+ *   ================================ */
+
+code {
+    display: block;
+    white-space: pre;
+    background: #0f1117;
+    color: #e3e6eb;
+    padding: 16px;
+    margin: 16px 0;
+    border-radius: var(--radius);
+    border: 1px solid rgba(255,255,255,0.06);
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 0.95rem;
+    overflow-x: auto;
+}
+
+/* ================================
+ *   Links
+ *   ================================ */
+
+a {
+    color: var(--accent);
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+/* ================================
+ *   Responsive
+ *   ================================ */
+
+@media only screen and (max-width: 900px) {
+    :root {
+        --nav-width: 100%;
+    }
+
+    #navbar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    }
+
+    #main-doc {
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 28px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    #main-doc {
+    padding: 20px;
+    }
+
+    code {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}

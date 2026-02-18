@@ -3,20 +3,258 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Amir Homsi's (is an) Ascended Human | ITIS 3135 | Course Website</title>
+    <title>Ascended Academy | C and C++ Documentation</title>
+
+    <!-- Fonts (Inter + Ubuntu) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Your site-wide default styles -->
     <link rel="stylesheet" href="styles/default.css">
+
+    <!-- Documentation-specific dark mode styles -->
+    <link rel="stylesheet" href="styles/instructions.css">
+
+    <!-- Lint.page accessibility kit -->
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   </head>
+
   <body>
+    <!-- Site header include -->
     <div data-include="components/header.html"></div>
-    <main>
-      <h2>Instructions Page</h2>
-      <p>More to come!</p>
+
+    <!-- Documentation Layout -->
+    <nav id="navbar">
+      <h1 class="nav-title">Ascended Academy C / C++ Docs</h1>
+      <ul>
+        <li><a class="nav-link" href="#Introduction">Overview of C and C++</a></li>
+        <li><a class="nav-link" href="#What_you_should_already_know">Prerequisites</a></li>
+        <li><a class="nav-link" href="#JavaScript_and_Java">C vs C++</a></li>
+        <li><a class="nav-link" href="#Hello_world">Hello World</a></li>
+        <li><a class="nav-link" href="#Variables">Variables and Types</a></li>
+        <li><a class="nav-link" href="#Declaring_variables">Declaring Variables</a></li>
+        <li><a class="nav-link" href="#Variable_scope">Scope and Lifetime</a></li>
+        <li><a class="nav-link" href="#Global_variables">Global State</a></li>
+        <li><a class="nav-link" href="#Constants">Constants</a></li>
+        <li><a class="nav-link" href="#Data_types">Fundamental Data Types</a></li>
+        <li><a class="nav-link" href="#if...else_statement">Conditional Statements</a></li>
+        <li><a class="nav-link" href="#while_statement">Loops</a></li>
+        <li><a class="nav-link" href="#Function_declarations">Functions</a></li>
+        <li><a class="nav-link" href="#Reference">Further Reading</a></li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+
+      <section class="main-section" id="Introduction">
+        <h2>Overview of C and C++</h2>
+        <article>
+          <p>
+            Within the Ascended Academy curriculum, C and C++ represent the
+            foundational disciplines of computational mastery. These languages
+            offer direct control over memory, performance, and system behavior.
+          </p>
+          <p>
+            C provides a minimal, powerful core. C++ extends that core with
+            abstractions that enable large-scale, high-performance software.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="What_you_should_already_know">
+        <h2>Prerequisites</h2>
+        <article>
+          <p>Before beginning, students should be comfortable with:</p>
+          <ul>
+            <li>Basic command-line usage</li>
+            <li>Reading simple code in any language</li>
+            <li>Understanding how programs are compiled and executed</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="JavaScript_and_Java">
+        <h2>C vs C++</h2>
+        <article>
+          <p>
+            C is procedural and minimal. C++ builds on C with classes, templates,
+            stronger type checking, and a rich standard library.
+          </p>
+          <p>
+            Both languages remain essential tools for systems programming,
+            embedded development, and performance-critical applications.
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Hello_world">
+        <h2>Hello World</h2>
+        <article>
+          <p>A minimal C program:</p>
+          <code>
+#include &lt;stdio.h&gt;
+
+int main(void) {
+    printf("Hello, world!\n");
+    return 0;
+}
+          </code>
+
+          <p>A minimal C++ program:</p>
+          <code>
+#include &lt;iostream&gt;
+
+int main() {
+    std::cout &lt;&lt; "Hello, world!\n";
+    return 0;
+}
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Variables">
+        <h2>Variables and Types</h2>
+        <article>
+          <p>
+            Variables in C and C++ have static types determined at compile time.
+          </p>
+          <p>
+            Common types include <code>int</code>, <code>double</code>,
+            <code>char</code>, and <code>bool</code> (C++).
+          </p>
+        </article>
+      </section>
+
+      <section class="main-section" id="Declaring_variables">
+        <h2>Declaring Variables</h2>
+        <article>
+          <p>Variables are declared by specifying a type and a name:</p>
+          <code>
+int count = 42;
+double temperature = 21.5;
+char initial = 'A';
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Variable_scope">
+        <h2>Scope and Lifetime</h2>
+        <article>
+          <p>
+            Local variables exist only within the function or block where they
+            are declared.
+          </p>
+          <code>
+void example() {
+    int x = 5;
+}
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Global_variables">
+        <h2>Global State</h2>
+        <article>
+          <p>
+            Global variables are accessible throughout a translation unit and
+            can be shared using <code>extern</code>.
+          </p>
+          <code>
+int counter = 0;
+
+void increment() {
+    ++counter;
+}
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Constants">
+        <h2>Constants</h2>
+        <article>
+          <p>
+            Constants can be defined using <code>#define</code>,
+            <code>const</code>, or <code>constexpr</code>.
+          </p>
+          <code>
+#define PI 3.14159
+const int max_users = 100;
+constexpr int buffer_size = 256;
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Data_types">
+        <h2>Fundamental Data Types</h2>
+        <article>
+          <ul>
+            <li><code>int</code> — integers</li>
+            <li><code>double</code> — floating-point numbers</li>
+            <li><code>char</code> — characters</li>
+            <li><code>bool</code> — booleans (C++)</li>
+            <li>Pointers — memory addresses</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="main-section" id="if...else_statement">
+        <h2>Conditional Statements</h2>
+        <article>
+          <code>
+int x = 10;
+
+if (x &gt; 0) {
+    // positive
+} else if (x &lt; 0) {
+    // negative
+} else {
+    // zero
+}
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="while_statement">
+        <h2>Loops</h2>
+        <article>
+          <code>
+int n = 0;
+
+while (n &lt; 3) {
+    ++n;
+}
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Function_declarations">
+        <h2>Functions</h2>
+        <article>
+          <code>
+int square(int x) {
+    return x * x;
+}
+          </code>
+        </article>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <h2>Further Reading</h2>
+        <article>
+          <ul>
+            <li><a href="https://en.cppreference.com" target="_blank">cppreference.com</a></li>
+            <li><a href="https://www.learncpp.com" target="_blank">Learn C++</a></li>
+          </ul>
+        </article>
+      </section>
+
     </main>
+
+    <!-- Site footer include -->
     <div data-include="components/footer.html"></div>
+
+    <!-- HTML include script -->
     <script src="scripts/HTMLInclude.min.js"></script>
   </body>
 </html>
