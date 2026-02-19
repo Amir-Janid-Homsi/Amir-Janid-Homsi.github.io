@@ -107,7 +107,7 @@ max-width: var(--content-max);
     margin-bottom: 32px;
 }
 
-.main-section h2 {
+h2 {
     font-family: var(--font-heading);
     font-size: 1.35rem;
     font-weight: 700;
@@ -160,13 +160,18 @@ a:hover {
     }
 
     #navbar {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--border-subtle);
+    position: sticky;
+    top: var(--site-header-height, 0px);
+    left: 0;
+    width: var(--nav-width);
+    max-height: calc(100vh - var(--site-header-height, 0px));
+    background: var(--bg-soft);
+    border-right: 1px solid var(--border-subtle);
+    padding-top: 20px;
+    overflow-y: auto;
+    box-sizing: border-box; /* FIX FOR ACCUMULUS */
     }
+
 
     #main-doc {
     margin-left: 0;
