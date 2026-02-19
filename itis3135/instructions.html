@@ -47,161 +47,172 @@
 
     <main id="main-doc">
 
-      <section class="main-section" id="Introduction">
-        <h2>Overview of C and C++</h2>
-        <article>
-          <p>
-            Within the Ascended Academy curriculum, C and C++ represent the
-            foundational disciplines of computational mastery. These languages
-            offer direct control over memory, performance, and system behavior.
-          </p>
-          <p>
-            C provides a minimal, powerful core. C++ extends that core with
-            abstractions that enable large-scale, high-performance software.
-          </p>
-        </article>
-      </section>
+  <section class="main-section" id="Introduction">
+    <h2>Overview of C and C++</h2>
+    <article>
+      <h3 class="sr-only">Overview of C and C++</h3>
+      <p>
+        Within the Ascended Academy curriculum, C and C++ represent the
+        foundational disciplines of computational mastery. These languages
+        offer direct control over memory, performance, and system behavior.
+      </p>
+      <p>
+        C provides a minimal, powerful core. C++ extends that core with
+        abstractions that enable large-scale, high-performance software.
+      </p>
+    </article>
+  </section>
 
-      <section class="main-section" id="What_you_should_already_know">
-        <h2>Prerequisites</h2>
-        <article>
-          <p>Before beginning, students should be comfortable with:</p>
-          <ul>
-            <li>Basic command-line usage</li>
-            <li>Reading simple code in any language</li>
-            <li>Understanding how programs are compiled and executed</li>
-          </ul>
-        </article>
-      </section>
+  <section class="main-section" id="What_you_should_already_know">
+    <h2>Prerequisites</h2>
+    <article>
+      <h3 class="sr-only">Prerequisites</h3>
+      <p>Before beginning, students should be comfortable with:</p>
+      <ul>
+        <li>Basic command-line usage</li>
+        <li>Reading simple code in any language</li>
+        <li>Understanding how programs are compiled and executed</li>
+      </ul>
+    </article>
+  </section>
 
-      <section class="main-section" id="JavaScript_and_Java">
-        <h2>C vs C++</h2>
-        <article>
-          <p>
-            C is procedural and minimal. C++ builds on C with classes, templates,
-            stronger type checking, and a rich standard library.
-          </p>
-          <p>
-            Both languages remain essential tools for systems programming,
-            embedded development, and performance-critical applications.
-          </p>
-        </article>
-      </section>
+  <section class="main-section" id="JavaScript_and_Java">
+    <h2>C vs C++</h2>
+    <article>
+      <h3 class="sr-only">C vs C++</h3>
+      <p>
+        C is procedural and minimal. C++ builds on C with classes, templates,
+        stronger type checking, and a rich standard library.
+      </p>
+      <p>
+        Both languages remain essential tools for systems programming,
+        embedded development, and performance-critical applications.
+      </p>
+    </article>
+  </section>
 
-      <section class="main-section" id="Hello_world">
-        <h2>Hello World</h2>
-        <article>
-          <p>A minimal C program:</p>
-          <code>
+  <section class="main-section" id="Hello_world">
+    <h2>Hello World</h2>
+    <article>
+      <h3 class="sr-only">Hello World</h3>
+      <p>A minimal C program:</p>
+      <code>
 #include &lt;stdio.h&gt;
 
 int main(void) {
     printf("Hello, world!\n");
     return 0;
 }
-          </code>
+      </code>
 
-          <p>A minimal C++ program:</p>
-          <code>
+      <p>A minimal C++ program:</p>
+      <code>
 #include &lt;iostream&gt;
 
 int main() {
     std::cout &lt;&lt; "Hello, world!\n";
     return 0;
 }
-          </code>
-        </article>
-      </section>
+      </code>
+    </article>
+  </section>
 
-      <section class="main-section" id="Variables">
-        <h2>Variables and Types</h2>
-        <article>
-          <p>
-            Variables in C and C++ have static types determined at compile time.
-          </p>
-          <p>
-            Common types include <code>int</code>, <code>double</code>,
-            <code>char</code>, and <code>bool</code> (C++).
-          </p>
-        </article>
-      </section>
+  <section class="main-section" id="Variables">
+    <h2>Variables and Types</h2>
+    <article>
+      <h3 class="sr-only">Variables and Types</h3>
+      <p>
+        Variables in C and C++ have static types determined at compile time.
+      </p>
+      <p>
+        Common types include <code>int</code>, <code>double</code>,
+        <code>char</code>, and <code>bool</code> (C++).
+      </p>
+    </article>
+  </section>
 
-      <section class="main-section" id="Declaring_variables">
-        <h2>Declaring Variables</h2>
-        <article>
-          <p>Variables are declared by specifying a type and a name:</p>
-          <code>
+  <section class="main-section" id="Declaring_variables">
+    <h2>Declaring Variables</h2>
+    <article>
+      <h3 class="sr-only">Declaring Variables</h3>
+      <p>Variables are declared by specifying a type and a name:</p>
+      <code>
 int count = 42;
 double temperature = 21.5;
 char initial = 'A';
-          </code>
-        </article>
-      </section>
+      </code>
+    </article>
+  </section>
 
-      <section class="main-section" id="Variable_scope">
-        <h2>Scope and Lifetime</h2>
-        <article>
-          <p>
-            Local variables exist only within the function or block where they
-            are declared.
-          </p>
-          <code>
+  <section class="main-section" id="Variable_scope">
+    <h2>Scope and Lifetime</h2>
+    <article>
+      <h3 class="sr-only">Scope and Lifetime</h3>
+      <p>
+        Local variables exist only within the function or block where they
+        are declared.
+      </p>
+      <code>
 void example() {
     int x = 5;
 }
-          </code>
-        </article>
-      </section>
+      </code>
+    </article>
+  </section>
 
-      <section class="main-section" id="Global_variables">
-        <h2>Global State</h2>
-        <article>
-          <p>
-            Global variables are accessible throughout a translation unit and
-            can be shared using <code>extern</code>.
-          </p>
-          <code>
+  <section class="main-section" id="Global_variables">
+    <h2>Global State</h2>
+    <article>
+      <h3 class="sr-only">Global State</h3>
+      <p>
+        Global variables are accessible throughout a translation unit and
+        can be shared using <code>extern</code>.
+      </p>
+      <code>
 int counter = 0;
 
 void increment() {
     ++counter;
 }
-          </code>
-        </article>
-      </section>
+      </code>
+    </article>
+  </section>
 
-      <section class="main-section" id="Constants">
-        <h2>Constants</h2>
-        <article>
-          <p>
-            Constants can be defined using <code>#define</code>,
-            <code>const</code>, or <code>constexpr</code>.
-          </p>
-          <code>
+  <section class="main-section" id="Constants">
+    <h2>Constants</h2>
+    <article>
+      <h3 class="sr-only">Constants</h3>
+      <p>
+        Constants can be defined using <code>#define</code>,
+        <code>const</code>, or <code>constexpr</code>.
+      </p>
+      <code>
 #define PI 3.14159
 const int max_users = 100;
 constexpr int buffer_size = 256;
-          </code>
-        </article>
-      </section>
+      </code>
+    </article>
+  </section>
 
-      <section class="main-section" id="Data_types">
-        <h2>Fundamental Data Types</h2>
-        <article>
-          <ul>
-            <li><code>int</code> — integers</li>
-            <li><code>double</code> — floating-point numbers</li>
-            <li><code>char</code> — characters</li>
-            <li><code>bool</code> — booleans (C++)</li>
-            <li>Pointers — memory addresses</li>
-          </ul>
-        </article>
-      </section>
+  <section class="main-section" id="Data_types">
+    <h2>Fundamental Data Types</h2>
+    <article>
+      <h3 class="sr-only">Fundamental Data Types</h3>
+      <ul>
+        <li><code>int</code> — integers</li>
+        <li><code>double</code> — floating-point numbers</li>
+        <li><code>char</code> — characters</li>
+        <li><code>bool</code> — booleans (C++)</li>
+        <li>Pointers — memory addresses</li>
+      </ul>
+    </article>
+  </section>
 
-      <section class="main-section" id="if...else_statement">
-        <h2>Conditional Statements</h2>
-        <article>
-          <code>
+  <section class="main-section" id="if...else_statement">
+    <h2>Conditional Statements</h2>
+    <article>
+      <h3 class="sr-only">Conditional Statements</h3>
+      <code>
 int x = 10;
 
 if (x &gt; 0) {
@@ -211,45 +222,49 @@ if (x &gt; 0) {
 } else {
     // zero
 }
-          </code>
-        </article>
-      </section>
+      </code>
+    </article>
+  </section>
 
-      <section class="main-section" id="while_statement">
-        <h2>Loops</h2>
-        <article>
-          <code>
+  <section class="main-section" id="while_statement">
+    <h2>Loops</h2>
+    <article>
+      <h3 class="sr-only">Loops</h3>
+      <code>
 int n = 0;
 
 while (n &lt; 3) {
     ++n;
 }
-          </code>
-        </article>
-      </section>
+      </code>
+    </article>
+  </section>
 
-      <section class="main-section" id="Function_declarations">
-        <h2>Functions</h2>
-        <article>
-          <code>
+  <section class="main-section" id="Function_declarations">
+    <h2>Functions</h2>
+    <article>
+      <h3 class="sr-only">Functions</h3>
+      <code>
 int square(int x) {
     return x * x;
 }
-          </code>
-        </article>
-      </section>
+      </code>
+    </article>
+  </section>
 
-      <section class="main-section" id="Reference">
-        <h2>Further Reading</h2>
-        <article>
-          <ul>
-            <li><a href="https://en.cppreference.com" target="_blank">cppreference.com</a></li>
-            <li><a href="https://www.learncpp.com" target="_blank">Learn C++</a></li>
-          </ul>
-        </article>
-      </section>
+  <section class="main-section" id="Reference">
+    <h2>Further Reading</h2>
+    <article>
+      <h3 class="sr-only">Further Reading</h3>
+      <ul>
+        <li><a href="https://en.cppreference.com" target="_blank">cppreference.com</a></li>
+        <li><a href="https://www.learncpp.com" target="_blank">Learn C++</a></li>
+      </ul>
+    </article>
+  </section>
 
-    </main>
+</main>
+
 
     <!-- Site footer include -->
     <div data-include="components/footer.html"></div>
