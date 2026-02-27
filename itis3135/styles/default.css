@@ -47,11 +47,11 @@ footer a {
 }
 
 a {
-    color: #006b9a; /* universal WCAG-passing link color */
+    color: #0077b6;
 }
 
 a:hover {
-    color: #004d70; /* darker hover state, also WCAG-safe */
+    color: #005f8f;
 }
 
 
