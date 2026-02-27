@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Second Wind Monitors</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Site-wide CSS -->
+  <link rel="stylesheet" href="styles/default.css">
+
+  <!-- Page-specific CSS -->
+  <link rel="stylesheet" href="styles/product.css">
+
+  <!-- Autograder -->
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Your site header include -->
+  <div data-include="components/header.html"></div>
+
+  <!-- FCC header structure (not a <header>) -->
+  <div id="header" class="product-header">
+    <img id="header-img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" alt="Second Wind Monitors logo">
+
+    <nav id="nav-bar">
+      <a class="nav-link" href="#features">Features</a>
+      <a class="nav-link" href="#how-it-works">How It Works</a>
+      <a class="nav-link" href="#pricing">Pricing</a>
+    </nav>
+  </div>
+
+  <main>
+
+    <section id="hero">
+      <h2>Reborn Displays for a Clearer Path Forward</h2>
+      <p class="tagline">Ultra‑thin, lightweight monitors restored from high‑performance gaming laptops.</p>
+
+      <form id="form" action="https://www.freecodecamp.org/email-submit">
+        <input id="email" name="email" type="email" placeholder="Enter your email" required>
+        <input id="submit" type="submit" value="Get Updates">
+      </form>
+    </section>
+
+    <section id="features">
+      <h2 class="visually-hidden">Features</h2>
+
+      <div class="feature">
+        <h3>Lightweight by Design</h3>
+        <p>Every panel is salvaged from a gaming laptop, giving you a monitor that’s thin, portable, and surprisingly sturdy.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Restored with Care</h3>
+        <p>Each display undergoes a full inspection, cleaning, and calibration to ensure clarity and color accuracy.</p>
+      </div>
+
+      <div class="feature">
+        <h3>Sustainable Performance</h3>
+        <p>By reclaiming high‑quality panels, we reduce e‑waste while offering premium performance at a fraction of the cost.</p>
+      </div>
+    </section>
+
+    <section id="how-it-works">
+      <h2 class="visually-hidden">How It Works</h2>
+
+      <iframe
+        id="video"
+        height="315"
+        src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&controls=1&showinfo=0"
+        allowfullscreen>
+      </iframe>
+    </section>
+
+    <section id="pricing">
+      <h2 class="visually-hidden">Pricing</h2>
+
+      <div class="product">
+        <div class="level">Esports</div>
+        <h3>$120</h3>
+        <ol>
+          <li>1080p LCD panels</li>
+          <li>Typically 144Hz</li>
+          <li>Compact and lightweight</li>
+          <li>Ideal for competitive play</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+
+      <div class="product">
+        <div class="level">Enthusiast</div>
+        <h3>$260</h3>
+        <ol>
+          <li>1440p OLED or 4K LCD</li>
+          <li>144–240Hz refresh rates</li>
+          <li>High color accuracy</li>
+          <li>Great for serious gamers</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+
+      <div class="product">
+        <div class="level">Encultured</div>
+        <h3>$480</h3>
+        <ol>
+          <li>Large 4K OLED panels</li>
+          <li>Minimum 120Hz</li>
+          <li>Exceptional color and PPI</li>
+          <li>Top‑tier reclaimed displays</li>
+        </ol>
+        <button class="btn">Select</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Your site footer include -->
+  <div data-include="components/footer.html"></div>
+
+  <!-- Include loader -->
+  <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
