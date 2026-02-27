@@ -46,21 +46,22 @@ footer a {
     color: #d6eaff; /* high-contrast link color */
 }
 
+/* Header links */
 header a {
     color: #00a2e8;
 }
-
 header a:hover {
     color: #0086bf;
 }
 
+/* Body links */
 body a {
-    color: #006b63;
+    color: #006b9a;
+}
+body a:hover {
+    color: #004d70;
 }
 
-body a:hover {
-    color: #00423d;
-}
 
 header, footer {
     padding: 32px;
