@@ -47,12 +47,13 @@ footer a {
 }
 
 a {
-    color: #006b9a;
+    color: #006b9a; /* universal WCAG-passing link color */
 }
 
 a:hover {
-    color: #00423d;
+    color: #004d70; /* darker hover state, also WCAG-safe */
 }
+
 
 header, footer {
     padding: 32px;
