@@ -43,9 +43,12 @@ footer {
 footer a {
     display: block;
     margin-bottom: 8px;
-    color: #d6eaff; 
+    color: #DDFFF7; 
 }
 
+footer a:hover {
+    color: #FFF;
+}
 /* Header links */
 header a {
     color: #65AFFF;
