@@ -32,34 +32,34 @@ main {
 
 header {
     background-color: #04080f;
-    color: #f7f5f4; /* slightly lighter for perfect contrast */
+    color: #f7f5f4; 
 }
 
 footer {
-    background-color: #4a4d57; /* darker than before to pass WCAG */
-    color: #ffffff; /* pure white for max contrast */
+    background-color: #4a4d57; 
+    color: #ffffff; 
 }
 
 footer a {
     display: block;
     margin-bottom: 8px;
-    color: #d6eaff; /* high-contrast link color */
+    color: #d6eaff; 
 }
 
 /* Header links */
 header a {
-    color: #00a2e8;
+    color: #65AFFF;
 }
 header a:hover {
-    color: #0086bf;
+    color: #FAFAFF;
 }
 
 /* Body links */
 body a {
-    color: #006b9a;
+    color: #17bebb;
 }
 body a:hover {
-    color: #004d70;
+    color: #235789;
 }
 
 
