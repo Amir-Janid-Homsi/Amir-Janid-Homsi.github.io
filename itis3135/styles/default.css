@@ -40,13 +40,16 @@ footer {
     color: #ffffff;
 }
 
-/* Header links */
-header a {
-    color: #00a2e8;
+header a,
+footer a {
+    color: #d6eaff;
 }
-header a:hover {
-    color: #0086bf;
+
+header a:hover,
+footer a:hover {
+    color: #bcdcff;
 }
+
 
 /* Body links */
 body a {
@@ -55,17 +58,6 @@ body a {
 body a:hover {
     color: #00423d;
 }
-
-/* Footer links */
-footer a {
-    display: block;
-    margin-bottom: 8px;
-    color: #d6eaff;
-}
-footer a:hover {
-    color: #bcdcff;
-}
-
 
 
 header, footer {
