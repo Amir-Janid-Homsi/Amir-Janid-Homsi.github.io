@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Gaming: Modern Power, Retro Soul</title>
+
+    <!-- Favicon (place favicon.ico in your hobby folder) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Embedded stylesheet (required) -->
+    <style>
+        /* -----------------------------------------
+           GLOBAL RETRO-FUTURISTIC THEME
+        ----------------------------------------- */
+        :root {
+            --bg-main: #0a0a0f;
+            --text-main: #e6e6e6;
+            --accent: #f5ff3a;
+            --text-muted: #b3b3b3;
+            --card-bg: #14141f;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg-main);
+            color: var(--text-main);
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        header {
+            border-bottom: 2px solid var(--accent);
+            padding: 1rem 1.5rem 0.75rem;
+            background: radial-gradient(circle at top, #181830 0, #0a0a0f 55%);
+        }
+
+        h1 {
+            margin: 0 0 0.5rem;
+            font-size: 1.9rem;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            text-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent);
+        }
+
+        nav {
+            font-size: 0.95rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+            align-items: center;
+        }
+
+        nav a {
+            color: var(--accent);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.8rem;
+        }
+
+        nav a:hover {
+            text-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent);
+        }
+
+        nav .divider {
+            color: var(--accent);
+            padding: 0 0.35rem;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 1.5rem 1.25rem 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 0.4rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            line-height: 1.6;
+            margin: 0 0 1rem;
+        }
+
+        ul {
+            margin: 0 0 1rem 1.25rem;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 0.4rem;
+        }
+
+        em {
+            color: var(--text-muted);
+        }
+
+        /* -----------------------------------------
+           SECTION VISIBILITY
+        ----------------------------------------- */
+        section {
+            display: none;
+            padding: 1.5rem;
+            background: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: 0 0 18px rgba(0, 0, 0, 0.6);
+            margin-bottom: 1.5rem;
+        }
+
+        #what {
+            display: block;
+        }
+
+        /* -----------------------------------------
+           FIGURES
+        ----------------------------------------- */
+        figure {
+            margin: 1.75rem auto 0.5rem;
+            padding: 1rem;
+            border-radius: 10px;
+            background: #10101a;
+            border: 1px solid rgba(245, 255, 58, 0.4);
+            max-width: 100%;
+        }
+
+        figure img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+
+        figure iframe {
+            max-width: 100%;
+            border: none;
+            border-radius: 6px;
+        }
+
+        figcaption {
+            margin-top: 0.6rem;
+            font-size: 0.9rem;
+            color: var(--accent);
+            text-align: left;
+        }
+
+        figure + p em {
+            font-size: 0.85rem;
+            display: block;
+            margin-top: 0.25rem;
+        }
+
+        details {
+            margin-top: 1rem;
+            background: #10101a;
+            border-radius: 8px;
+            padding: 0.75rem 1rem;
+            border: 1px solid rgba(245, 255, 58, 0.35);
+        }
+
+        details summary {
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        details p {
+            margin-top: 0.75rem;
+            white-space: pre-wrap;
+        }
+
+        footer {
+            border-top: 1px solid var(--accent);
+            padding: 1rem 1.5rem 1.5rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        footer .validators a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 0.75rem;
+            font-size: 0.85rem;
+        }
+
+        footer .validators a:hover {
+            text-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent);
+        }
+
+        footer .firm a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer .firm a:hover {
+            text-shadow: 0 0 6px var(--accent), 0 0 12px var(--accent);
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 0.9rem 1rem 0.7rem;
+            }
+            main {
+                padding: 1.25rem 1rem 2.5rem;
+            }
+            section {
+                padding: 1.25rem;
+            }
+        }
+    </style>
+
+    <!-- Minimal JS for SPA-like navigation -->
+    <script>
+        function showSection(id) {
+            document.querySelectorAll("main section").forEach((sec) => {
+                sec.style.display = "none";
+            });
+            const target = document.getElementById(id);
+            if (target) {
+                target.style.display = "block";
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+        }
+        (async () => {
+  const text = await fetch("copilot-convo.txt").then((r) => r.text());
+  document.getElementById("copilot-convo").textContent = text;
+})();
+
+    </script>
+</head>
+
+<body>
+
+<header>
+    <h1>PC Gaming: Modern Power, Retro Soul</h1>
+
+    <nav>
+        <a href="#" onclick="showSection('what'); return false;">What</a>
+        <span class="divider">│</span>
+        <a href="#" onclick="showSection('who'); return false;">Who</a>
+        <span class="divider">│</span>
+        <a href="#" onclick="showSection('when'); return false;">When</a>
+        <span class="divider">│</span>
+        <a href="#" onclick="showSection('where'); return false;">Where</a>
+        <span class="divider">│</span>
+        <a href="#" onclick="showSection('how'); return false;">How</a>
+        <span class="divider">│</span>
+        <a href="#" onclick="showSection('why'); return false;">Why</a>
+        <span class="divider">│</span>
+        <a href="#" onclick="showSection('ai-prompts'); return false;">AI Prompts</a>
+    </nav>
+</header>
+
+<main>
+
+    <!-- WHAT (Home) -->
+    <section id="what">
+        <h2>My Awesome Hobby: PC Gaming</h2>
+
+        <p>
+            PC gaming is genuinely the ultimate way to play games for me. A lot of people get overwhelmed by all
+            the settings and sliders, but I actually enjoy configuring everything and making a game run exactly
+            how I want. That applies to retro games too—between emulation, PC ports, and community projects, you
+            can customize older titles in ways that weren’t possible on original hardware, and I even hook a CRT
+            TV directly to my PC because many 90s games were designed around that display technology. After all
+            the setup, I finally sit down and play, and it feels like I’m experiencing the game in the best
+            possible way.
+        </p>
+
+        <p>
+            When I think of PC gaming, I see it as an open platform built around freedom and choice. You can
+            decide exactly what settings you run your games at, where you buy them, what hardware you use, and
+            even what operating system you prefer—Linux now runs most games out of the box. PC gaming also gives
+            you the variety you expect from any platform, from online multiplayer without a subscription to any
+            genre you can imagine, all on whatever display you want. And because the PC supports emulation, I can
+            legally dump and play the games I own using the tools I prefer, which adds another layer of flexibility
+            I really enjoy.
+        </p>
+
+        <p>
+            Building a computer can be a big barrier for some people, which is why many just buy a pre‑built, but
+            I genuinely enjoy putting together part lists and seeing how different components work together. Any
+            time a new console launches, I’m immediately curious about how it stacks up against modern PC hardware
+            and what design choices the developers made. I love analyzing how console makers and game studios
+            optimize their games for specific hardware, and channels like Digital Foundry dive deep into exactly
+            that kind of comparison. Following this kind of technical breakdown is a big part of what makes PC
+            gaming exciting for me.
+        </p>
+
+        <figure>
+            <!-- IMAGE: neon-lit PC + CRT (place in images/ folder and update src) -->
+            <img src="images/pc-crt-neon.png" alt="A neon-lit PC tower next to a CRT displaying retro visuals.">
+            <figcaption>A neon‑lit PC tower next to a CRT displaying retro visuals.</figcaption>
+        </figure>
+        <p>
+            <em>
+                I generated this image using the exact words I asked the AI: “a neon‑lit PC tower with a CRT
+                showing pixel art,” with the clarification that the pixel art should be the kind that blends
+                together on a CRT to almost no longer look like pixel art.
+            </em>
+        </p>
+    </section>
+
+    <!-- WHO -->
+    <section id="who">
+        <h2>Who I Am: Amir Homsi</h2>
+
+        <p>
+            I’ve been playing on computers in some form since I was about five. I detoured into iPads and iOS
+            during the latter half of elementary school, but because Apple locked down so many gaming features,
+            I ended up tinkering with those devices the same way I would a computer. Growing up, I watched tons
+            of YouTube let’s plays, which helped me explore all kinds of games even though I could only play
+            maybe a quarter of them on whatever hardware I had at the time—an Xbox 360 late in its generation,
+            a Wii U with mostly Nintendo titles, and older systems that could only run certain retro games. As
+            I got older and gained access to better hardware, I finally got to play more games than I watched,
+            and now I try to play—or at least form an opinion on—as many games as I can.
+        </p>
+
+        <p>
+            It took me a surprisingly long time to realize that computer science was the field I’d been orbiting
+            my whole life. The childhood dream of game development, jailbreaking my iPad, and homebrewing my 2DS
+            were all connected, but the wires didn’t click until middle school, when I finally learned that being
+            a doctor was nothing like the three video games that made it look fun. Once I turned my attention
+            toward computers directly, they stopped being just the middleman for entertainment and became the
+            entertainment themselves. Sometimes I wonder how much deeper into this hobby I would’ve gone if I had
+            figured it out earlier—would I be some kind of super‑genius by now???
+        </p>
+
+        <p>
+            I decided to study computer science at UNCC mostly because it was affordable and close to home, not
+            because of some dramatic lifelong dream. Even so, I’ve learned a lot here—especially compared to high
+            school, where most classes felt like a snooze fest except for math and a few odd exceptions. I’m
+            naturally curious and inquisitive, so sometimes I wonder how much further along I’d be if I’d had real
+            CS classes earlier, maybe even enough to land a job in this chaotic job market already. And for the
+            record, if any employer ever reads this, my lack of club involvement isn’t because I couldn’t be
+            bothered—there just wasn’t a group that felt like the right place for me, and I would’ve absolutely
+            killed it if there had been.
+        </p>
+
+        <figure>
+            <!-- IMAGE: real photo of you (place in images/ folder and update src) -->
+            <img src="images/amir-mgs4-face.jpg" alt="Me doing my best impression of the American Metal Gear Solid 4 box art.">
+            <figcaption>Me, doing my best impression of the (American) Metal Gear Solid 4 box art. Yeah, I know it was not very good.</figcaption>
+        </figure>
+        <p>
+            <em>
+                This is a real photo of me that I took specifically for this project, not generated by AI.
+            </em>
+        </p>
+    </section>
+
+    <!-- WHEN -->
+    <section id="when">
+        <h2>When I Dive Into PC Gaming</h2>
+
+        <p>
+            I used to play for hours every day, especially back in middle school. Nowadays there are plenty of
+            days where I don’t play a single game, and that honestly saddens me a bit. But I’m also glad I respect
+            gaming enough to want each session to feel complete, not something that gets arbitrarily cut short.
+            I try to play only when I feel I can give whatever game I’m in the middle of the attention it deserves.
+        </p>
+
+        <p>
+            I also pick the right kind of game for the time I have and where I am in life. I can’t grind an Elden
+            Ring boss if I’m lying in bed or sitting in a waiting room, but I can play something like Metroid or
+            Silksong in those moments. I make time to play with friends too, and that usually creates a safe,
+            dedicated block of time where the game gets my full attention. Some games even feel like they require
+            a specific controller, especially retro ones, and I won’t play them unless I have the right setup.
+        </p>
+
+        <p>
+            There are also stretches where I don’t end up gaming, but it’s never because I need time away from
+            screens — my brain is basically flipped from people who feel that way. Sometimes I play because it
+            fits into a routine my mind is stuck in, even outside of being productive; booting a game or beating
+            a small section can feel like a tiny goal I set for myself. Other times I’m just not in the right
+            headspace for a specific game, and I wait until the moment feels right to return. When I do come back,
+            it feels intentional, like I picked the exact time that makes the experience feel satisfying instead
+            of rushed.
+        </p>
+
+        <figure>
+            <!-- IMAGE: scale “finish that game / start that other game” -->
+            <img src="images/finish-start-scale.png" alt="A scale leaning between 'finish that game' and 'start that other game'.">
+            <figcaption>A scale leaning between “finish that game” and “start that other game,” showing how my gaming time often swings between the two.</figcaption>
+        </figure>
+        <p>
+            <em>
+                I generated this image by asking the LLM I used for “a scale with two sides labeled ‘finish that
+                game’ and ‘start that other game,’ with the scale leaning toward the latter to show how I go back
+                and forth on what to play.”
+            </em>
+        </p>
+    </section>
+
+    <!-- WHERE -->
+    <section id="where">
+        <h2>Where Can I PC Game?</h2>
+
+        <p>
+            I usually play games at my desk, because that’s my battle station — if that wasn’t my go‑to spot,
+            something would be seriously wrong. But sometimes I want to play in bed, and that’s where my Steam
+            Deck comes in (my little brother sold it to me, and the little fool still regrets it). It’s a Linux
+            PC with the best controller known to man attached to both sides, which means I can even tinker with
+            it like a real PC, just on the go. I very occasionally play on original hardware too, and honestly
+            the last time I felt the need was Mother 3, since its music‑based battle system only avoids lag on
+            the real thing. Even then, my 2DS is allegedly less laggy than a real GBA, but hunting down a GBA
+            plus a pirated English‑patched copy isn’t worth the trouble.
+        </p>
+
+        <p>
+            I don’t think of my desk as the “real” way to game — I just like playing each game in what I consider
+            its ideal setup. But sometimes I want to play a game just a bit more than I want to experience it in
+            the perfect way on my desktop PC, so I weigh the options and pick whatever space makes sense in that
+            moment. I don’t do couch gaming at all, and if I leave my room it’s never for gaming (unless I’m at
+            a computer store, but that doesn’t count). Gaming outside my room does happen, but only as a way to
+            pass time — I’m not completely stuck in my room, even if that might be a fun life. Maybe I’d be more
+            open to the idea if I had a nice TV in my room, but for now everything stays in my little ecosystem
+            of desk, bed, and handheld.
+        </p>
+
+        <p>
+            My room is also where I get excited about the future of how I’ll play. I can’t wait for the new Steam
+            Controller — I’ve been using my Steam Deck as a controller for over a year now while waiting for Valve
+            to finally make the controller they’ve clearly always wanted to build. Steam Input has completely
+            changed how I game, and it’s wild how gyro aim has made my mouse feel obsolete in most games. And once
+            Linux PSVR2 support gets ironed out, I want to dive back into VR and feel that higher level of immersion
+            again. If the drivers still aren’t finished in a year, I’ll cave and run it through a Windows 11 VM,
+            but either way, all of that tinkering and experimenting is something that only really happens in my
+            room — it’s the space where my setup evolves.
+        </p>
+
+        <figure>
+            <!-- IMAGE: stylized L-shaped setup -->
+            <img src="images/l-shaped-setup.png" alt="A stylized version of my actual L-shaped gaming setup with PC, CRT, Steam Deck, and audio gear.">
+            <figcaption>A stylized version of my actual L‑shaped gaming setup, including my PC, CRT, Steam Deck, and audio gear.</figcaption>
+        </figure>
+        <p>
+            <em>
+                I generated this image by asking the LLM for a stylized recreation of my real L‑shaped gaming setup,
+                including my 27‑inch monitor, RGB PC, CRT angled toward me, Steam Deck, SNES controller, Roccat mouse,
+                and my audio interface with a Shure mic and Sennheiser headphones.
+            </em>
+        </p>
+    </section>
+
+    <!-- HOW -->
+    <section id="how">
+        <h2>How Can I PC Game?</h2>
+
+        <p>
+            PC gaming, for me, is about finding the way a game should feel — not proving a point, not being
+            different, and definitely not joining the endless “best input method” debates. I refine my setups
+            because I genuinely enjoy making games play better, not because I’m trying to escape the norm. Steam
+            Input didn’t just change how I play; it felt like the natural evolution of controls, the moment
+            everything finally clicked into place. Gyro aim gives me a level of precision and comfort that feels
+            right for me, just like mouse and keyboard feels right for others. And honestly, both sides can get
+            weirdly defensive — controller players and mouse players alike — when it should really be a conversation
+            about making gaming more accessible, more flexible, and more enjoyable for everyone. The fun part is
+            perfecting the control scheme, dialing in the settings, and shaping the experience so each game plays
+            the way it deserves to.
+        </p>
+
+        <p>
+            When I start a game, I usually reach for my Steam Deck‑as‑a‑controller unless the game is built around
+            the mouse, like point‑and‑clicks. If a game is d‑pad centric — mostly 2D stuff — I grab my Super
+            Nintendo controller, even if that means getting creative to make it work. My choices always come down
+            to a mix of precision, comfort, immersion, and what the game actually demands. A controller (with gyro,
+            to me at least) often feels more immersive because it’s more expressive and precise, and the fact that
+            so many shooters pair stick‑only camera controls with heavy aim assist says a lot about the limitations
+            of that input method. Steam Input is where everything comes together: I tweak every game, I refine every
+            layout, and even though I have loose templates for certain genres, it always takes playtesting to get it
+            perfect — and I love that process. My desktop is usually the best place to play, but some games deserve
+            the comfort of my bed or the convenience of being a passtime between things, which is where the Steam
+            Deck shines as a handheld. Original hardware is reserved for rare edge cases like Mother 3, where timing
+            or latency actually matters. And VR is something I see as the future — maybe even the standard one day —
+            but right now it’s more of an experimental glimpse at what full sensory immersion could be. If I ever get
+            frustrated at a game for not supporting my controller properly, it’s only because I know the fix wouldn’t
+            take much work, and the experience could be so much better for everyone.
+        </p>
+
+        <p>
+            At the end of the day, the way I play is shaped by a simple idea: PC gaming gives you the freedom to
+            make every game feel better than it did by default. It’s not about choosing sides or arguing over which
+            input method is “correct,” because every method has strengths and weaknesses, and every player values
+            different things. What matters to me is that the tools exist to refine the experience — to make controls
+            more expressive, to make movement feel natural, to make aiming feel intuitive, to make the whole thing
+            more immersive. Steam Input, gyro, handheld play, original hardware, VR… they’re all just different ways
+            of reaching the same goal: shaping the game so it plays the way it should. And when a game doesn’t support
+            that level of refinement, it’s frustrating not because I’m picky, but because I know how little it would
+            take to elevate the experience for everyone. PC gaming is at its best when it embraces flexibility,
+            experimentation, and the idea that players should be able to interact with games in the way that feels
+            right to them — not the way tradition says they should.
+        </p>
+
+        <figure>
+            <!-- YOUTUBE VIDEO EMBED -->
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/binPB4YbWmM"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <figcaption>
+                A video essay that shaped how I think about input methods, motion controls, and the future of how we interact with games.
+            </figcaption>
+        </figure>
+        <p>
+            <em>
+                I discussed how I would include this video in the section because it reflects many of the ideas I
+                talk about here and helped shape my perspective on control design and PC gaming.
+            </em>
+        </p>
+    </section>
+
+    <!-- WHY -->
+    <section id="why">
+        <h2>Why PC Gaming?</h2>
+
+        <p>
+            PC gaming is the closest thing gaming has to being truly open source. The entire world quietly runs on
+            open‑source software, and most people don’t realize just how much of everything they use depends on it.
+            I love PC gaming because it shares that same spirit—when a hobby is open, people can build wild, creative
+            things that would never exist in a locked‑down ecosystem. Imagine if every CG asset in your favorite
+            action movie were available for cheap or even free, or if you could build an original car from parts sold
+            by BMW, Toyota, or even Ferrari; that’s the kind of possibility openness creates.
+        </p>
+
+        <p>
+            Another reason I care so much about PC gaming is that there’s always one layer deeper—there’s always more
+            to the story. Any time I tweak a setting, mod a game, or fix something that breaks, it usually confuses me
+            at first, but I often end up learning how all these pieces manage to play nice… or sometimes don’t. It’s a
+            hobby that gets better the more you do it, and honestly, it even improves passively over time just by being
+            around it.
+        </p>
+
+        <p>
+            I also care about PC gaming because it’s one of the few hobbies that actually grows with you instead of
+            aging out (the RAM prices will go down, high framerates and resolutions will become affordable, just have
+            faith!). The games I played as a kid still run today—sometimes better than ever—and the hardware I use now
+            will still matter years from now in some form. There’s something comforting about a hobby that I’ll fight
+            to keep around, one that doesn’t vanish when the trend cycle moves on but keeps expanding, layering new
+            experiences on top of old ones without replacing them.
+        </p>
+
+        <figure>
+            <!-- IMAGE: four-quadrant heart -->
+            <img src="images/four-heart.png" alt="A four-quadrant heart in Nintendo red, Sony blue, Microsoft green, and Valve orange-red.">
+            <figcaption>A four‑quadrant heart representing Nintendo, Valve, Sony, and Microsoft—pretend their logos are in each quadrant respectively.</figcaption>
+        </figure>
+        <p>
+            <em>
+                I generated this image by asking the LLM I used for “a heart divided into four equal quadrants, each
+                one colored to represent Nintendo (red), Sony (blue), Microsoft (green), and Valve (gray), with no
+                logos — just the colors.” I originally wanted the actual company logos in each quadrant, but the LLM
+                I used told me that would be a copyright/trademark issue, so we used color‑only quadrants instead.
+            </em>
+        </p>
+    </section>
+
+    <!-- AI PROMPTS -->
+    <section id="ai-prompts">
+        <h2>AI Prompts</h2>
+
+        <p>
+            I used AI for generating images and copilot for discussing how I would include the video in the How section.
+        </p>
+
+        <h3>Image Prompts</h3>
+        <ul>
+            <li>
+                “a neon‑lit PC tower with a CRT showing pixel art,” with the clarification that the pixel art should
+                be the kind that blends together on a CRT to almost no longer look like pixel art.
+            </li>
+            <li>
+                “a heart divided into four equal quadrants, each one colored to represent Nintendo (red), Sony (blue),
+                Microsoft (green), and Valve (gray), with no logos — just the colors.”
+            </li>
+            <li>
+                “a scale with two sides labeled ‘finish that game’ and ‘start that other game,’ with the scale leaning
+                toward the latter to show how I go back and forth on what to play.”
+            </li>
+            <li>
+                “a stylized recreation of my real L‑shaped gaming setup, including my 27‑inch monitor, RGB PC, CRT
+                angled toward me, Steam Deck, SNES controller, Roccat mouse, and my audio interface with a Shure mic
+                and Sennheiser headphones.”
+            </li>
+        </ul>
+
+        <h3>Video Explanation</h3>
+        <p>
+            I discussed how I would include the video because it reflects many of the ideas I talk about in the How
+            section and helped shape my perspective on control design and PC gaming.
+        </p>
+
+        <details>
+            <summary>Full Conversation Transcript (click to expand)</summary>
+            <p id = "copilot-convo">
+              
+            </p>
+        </details>
+    </section>
+
+</main>
+
+<footer>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <div class="firm">
+        <p>&copy; 2026 Mirrored Designs</p>
+      <p><a href="mirroreddesigns.sh/mirroreddesigns.html">Visit Mirrored Designs</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
