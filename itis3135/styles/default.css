@@ -39,8 +39,7 @@ footer {
     background-color: #4a4d57;
     color: #ffffff;
 }
-
-/* Body links FIRST */
+/* Body links */
 body a {
     color: #006b63;
 }
@@ -48,7 +47,13 @@ body a:hover {
     color: #00423d;
 }
 
-/* Header + Footer links AFTER so they override */
+/* Footer layout (restores line separation) */
+footer a {
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Header + Footer link colors */
 header a,
 footer a {
     color: #d6eaff;
@@ -58,6 +63,7 @@ header a:hover,
 footer a:hover {
     color: #bcdcff;
 }
+
 
 
 header, footer {
