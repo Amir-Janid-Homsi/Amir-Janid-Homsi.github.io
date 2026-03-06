@@ -190,3 +190,15 @@ a:hover {
         font-size: 0.9rem;
     }
 }
+/* ================================
+ *   Override: Use Header/Footer Link Colors
+ *   ================================ */
+
+#main-doc a,
+#main-doc a:visited {
+color: #d6eaff;
+}
+
+#main-doc a:hover {
+color: #bcdcff;
+}
