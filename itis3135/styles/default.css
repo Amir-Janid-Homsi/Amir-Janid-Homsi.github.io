@@ -35,16 +35,13 @@ header {
     color: #f7f5f4; 
 }
 
-footer {
-    background-color: #4a4d57; 
-    color: #ffffff; 
+footer a {
+    color: #d6eaff;
+}
+footer a:hover {
+    color: #bcdcff;
 }
 
-footer a {
-    display: block;
-    margin-bottom: 8px;
-    color: #DDFFF7; 
-}
 
 footer a:hover {
     color: #FFF;
@@ -57,13 +54,13 @@ header a:hover {
     color: #FAFAFF;
 }
 
-/* Body links */
 body a {
-    color: #17bebb;
+    color: #006b63;
 }
 body a:hover {
-    color: #235789;
+    color: #00423d;
 }
+
 
 
 header, footer {
