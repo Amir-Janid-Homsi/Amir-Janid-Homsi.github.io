@@ -35,30 +35,35 @@ header {
     color: #f7f5f4; 
 }
 
-footer a {
-    color: #d6eaff;
-}
-footer a:hover {
-    color: #bcdcff;
+footer {
+    background-color: #4a4d57;
+    color: #ffffff;
 }
 
-
-footer a:hover {
-    color: #FFF;
-}
 /* Header links */
 header a {
-    color: #65AFFF;
+    color: #00a2e8;
 }
 header a:hover {
-    color: #FAFAFF;
+    color: #0086bf;
 }
 
+/* Body links */
 body a {
     color: #006b63;
 }
 body a:hover {
     color: #00423d;
+}
+
+/* Footer links */
+footer a {
+    display: block;
+    margin-bottom: 8px;
+    color: #d6eaff;
+}
+footer a:hover {
+    color: #bcdcff;
 }
 
 
