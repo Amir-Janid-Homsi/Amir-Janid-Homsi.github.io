@@ -40,6 +40,15 @@ footer {
     color: #ffffff;
 }
 
+/* Body links FIRST */
+body a {
+    color: #006b63;
+}
+body a:hover {
+    color: #00423d;
+}
+
+/* Header + Footer links AFTER so they override */
 header a,
 footer a {
     color: #d6eaff;
@@ -48,15 +57,6 @@ footer a {
 header a:hover,
 footer a:hover {
     color: #bcdcff;
-}
-
-
-/* Body links */
-body a {
-    color: #006b63;
-}
-body a:hover {
-    color: #00423d;
 }
 
 
