@@ -2,30 +2,6 @@ const form = document.getElementById("intro-form");
 // ===============================
 // FUNCTIONS FIRST (fixes "used before defined")
 // ===============================
-
-function generateIntroduction() {
-  const data = getFormData();
-  if (!validateRequired(data)) {
-    alert("Please fill out all required fields.");
-    return;
-  }
-
-  const output = document.getElementById("output");
-  output.innerHTML = buildIntroHTML(data);
-  form.style.display = "none";
-
-  const resetLink = document.createElement("button");
-  resetLink.textContent = "Reset Form";
-  resetLink.addEventListener("click", () => location.reload());
-  output.appendChild(resetLink);
-
-  // autograder
-  const grader = document.createElement("script");
-  grader.src = "https://lint.page/kit/4d0fe3.js";
-  grader.crossOrigin = "anonymous";
-  output.appendChild(grader);
-}
-
 function getFormData() {
   const formData = new FormData(form);
 
@@ -85,7 +61,6 @@ function getFormData() {
     ]
   };
 }
-
 function validateRequired(data) {
   return Boolean(
     data.first &&
@@ -151,6 +126,32 @@ function buildIntroHTML(data) {
     </footer>
     `;
 }
+function generateIntroduction() {
+  const data = getFormData();
+  if (!validateRequired(data)) {
+    alert("Please fill out all required fields.");
+    return;
+  }
+
+  const output = document.getElementById("output");
+  output.innerHTML = buildIntroHTML(data);
+  form.style.display = "none";
+
+  const resetLink = document.createElement("button");
+  resetLink.textContent = "Reset Form";
+  resetLink.addEventListener("click", () => location.reload());
+  output.appendChild(resetLink);
+
+  // autograder
+  const grader = document.createElement("script");
+  grader.src = "https://lint.page/kit/4d0fe3.js";
+  grader.crossOrigin = "anonymous";
+  output.appendChild(grader);
+}
+
+
+
+
 
 // ===============================
 // EVENT LISTENERS AFTER FUNCTIONS
