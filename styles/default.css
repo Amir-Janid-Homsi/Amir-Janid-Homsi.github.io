@@ -58,3 +58,8 @@ a:hover {
 header, footer {
     padding: 32px;
 }
+figure img {
+    width: 12.5%;
+    height: auto;
+    display: block;
+}
