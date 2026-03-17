@@ -4,22 +4,22 @@
 
 function buildJSONLiteral(data) {
   const jsonObj = {
-    first_name: data.first,
-    middle_name: data.middle,
-    preferred_name: data.preferred,
-    last_name: data.last,
+    firstName: data.first,
+    middleName: data.middle,
+    preferredName: data.preferred,
+    lastName: data.last,
     divider: data.divider,
-    mascot_adjective: data.mascotAdj,
-    mascot_animal: data.mascotAnimal,
+    mascotAdjective: data.mascotAdj,
+    mascotAnimal: data.mascotAnimal,
     image: data.picture,
-    image_caption: data.caption,
-    personal_statement: data.personalStatement,
-    personal_background: data.bullets.personal,
-    professional_background: data.bullets.professional,
-    academic_background: data.bullets.academic,
-    subject_background: data.bullets.subject,
-    primary_computer: data.bullets.primary,
-    backup_plan: data.bullets.backup,
+    imageCaption: data.caption,
+    personalStatement: data.personalStatement,
+    personalBackground: data.bullets.personal,
+    professionalBackground: data.bullets.professional,
+    academicBackground: data.bullets.academic,
+    subjectBackground: data.bullets.subject,
+    primaryComputer: data.bullets.primary,
+    backupPlan: data.bullets.backup,
     courses: data.courses.map((c) => ({
       department: c.dept,
       number: c.num,
@@ -29,7 +29,7 @@ function buildJSONLiteral(data) {
     funny: data.funny || "",
     share: data.share || "",
     quote: data.quote,
-    quote_author: data.quoteAuthor,
+    quoteAuthor: data.quoteAuthor,
     links: data.links.map((l) => ({ href: l }))
   };
 

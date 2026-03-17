@@ -50,9 +50,30 @@
         </label>
 
         <label>Acknowledgment Date:
-          <input type="date" name="ack_date" required value="2026-01-12" aria-describedby="date-note">
-        </label>
-        <small id="date-note">If your browser does not support date inputs, enter as YYYY-MM-DD.</small>
+          <input type="date" name="ack_date" required id="ack_date">
+<script>
+  // Simple date polyfill for older browsers
+  (function() {
+    var input = document.createElement("input");
+    input.setAttribute("type", "date");
+    if (input.type !== "date") {
+      var script = document.createElement("script");
+      script.src = "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js";
+      document.head.appendChild(script);
+
+      var link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css";
+      document.head.appendChild(link);
+
+      script.onload = function() {
+        $("#ack_date").datepicker({ dateFormat: "yy-mm-dd" });
+      };
+    }
+  })();
+</script>
+
+
 
         <!-- MASCOT -->
         <label>Mascot Adjective:

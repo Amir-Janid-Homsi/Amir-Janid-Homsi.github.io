@@ -1,3 +1,4 @@
+const form = document.getElementById("intro-form");
 // ===============================
 // FUNCTIONS FIRST (fixes "used before defined")
 // ===============================
@@ -154,8 +155,6 @@ function buildIntroHTML(data) {
 // ===============================
 // EVENT LISTENERS AFTER FUNCTIONS
 // ===============================
-
-const form = document.getElementById("intro-form");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
