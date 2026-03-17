@@ -79,6 +79,13 @@ function generateIntroduction() {
   resetLink.textContent = "Reset Form";
   resetLink.addEventListener("click", () => location.reload());
   output.appendChild(resetLink);
+
+  // Add autograder script
+  const grader = document.createElement("script");
+  grader.src = "https://lint.page/kit/4d0fe3.js";
+  grader.crossOrigin = "anonymous";
+  output.appendChild(grader);
+
 }
 
 // -------------------------------
