@@ -1,94 +1,197 @@
 // ===============================
-// GENERATE HTML OUTPUT
+// FUNCTIONS FIRST (fixes "used before defined")
 // ===============================
 
-document.getElementById("generate-html-button").addEventListener("click", () => {
-  const data = getFormData(); // from introduction.js
+function generateIntroduction() {
+  const data = getFormData();
+  if (!validateRequired(data)) {
+    alert("Please fill out all required fields.");
+    return;
+  }
 
   const output = document.getElementById("output");
+  output.innerHTML = buildIntroHTML(data);
   form.style.display = "none";
 
-  // Build literal HTML
-  const htmlLiteral = buildLiteralHTML(data);
-
-  output.innerHTML = `
-    <h2>Introduction HTML</h2>
-    <section>
-      <pre><code class="language-html">${escapeHTML(htmlLiteral)}</code></pre>
-    </section>
-  `;
-
-  // Highlight.js
-  hljs.highlightAll();
-
-  // Reset button
   const resetLink = document.createElement("button");
   resetLink.textContent = "Reset Form";
   resetLink.addEventListener("click", () => location.reload());
   output.appendChild(resetLink);
-});
 
-// -------------------------------
-// BUILD LITERAL HTML STRING
-// -------------------------------
-function buildLiteralHTML(data) {
+  // autograder
+  const grader = document.createElement("script");
+  grader.src = "https://lint.page/kit/4d0fe3.js";
+  grader.crossOrigin = "anonymous";
+  output.appendChild(grader);
+}
+
+function getFormData() {
+  const formData = new FormData(form);
+
+  const courses = [];
+  const courseDivs = document.querySelectorAll("#courses-container .course");
+
+  courseDivs.forEach((div) => {
+    const dept = div.querySelector("input[name='course_dept']").value;
+    const num = div.querySelector("input[name='course_num']").value;
+    const name = div.querySelector("input[name='course_name']").value;
+    const reason = div.querySelector("input[name='course_reason']").value;
+
+    if (dept || num || name || reason) {
+      courses.push({ dept, num, name, reason });
+    }
+  });
+
+  const pictureFile = formData.get("picture");
+  let pictureURL = "LPLJoke.jpg";
+
+  if (pictureFile && pictureFile.size > 0) {
+    pictureURL = URL.createObjectURL(pictureFile);
+  }
+
+  return {
+    first: formData.get("first_name"),
+    middle: formData.get("middle_name"),
+    preferred: formData.get("preferred_name"),
+    last: formData.get("last_name"),
+    ack: formData.get("ack_statement"),
+    ackDate: formData.get("ack_date"),
+    mascotAdj: formData.get("mascot_adj"),
+    mascotAnimal: formData.get("mascot_animal"),
+    divider: formData.get("divider"),
+    picture: pictureURL,
+    caption: formData.get("picture_caption"),
+    personalStatement: formData.get("personal_statement"),
+    bullets: {
+      personal: formData.get("personal_background"),
+      professional: formData.get("professional_background"),
+      academic: formData.get("academic_background"),
+      subject: formData.get("subject_background"),
+      primary: formData.get("primary_computer"),
+      backup: formData.get("backup_plan")
+    },
+    courses,
+    quote: formData.get("quote"),
+    quoteAuthor: formData.get("quote_author"),
+    funny: formData.get("funny"),
+    share: formData.get("share"),
+    links: [
+      formData.get("link1"),
+        formData.get("link2"),
+          formData.get("link3"),
+            formData.get("link4"),
+              formData.get("link5")
+    ]
+  };
+}
+
+function validateRequired(data) {
+  return Boolean(
+    data.first &&
+    data.last &&
+    data.ack &&
+    data.ackDate &&
+    data.mascotAdj &&
+    data.mascotAnimal &&
+    data.divider &&
+    data.caption &&
+    data.personalStatement &&
+    data.bullets.personal &&
+    data.bullets.professional &&
+    data.bullets.academic &&
+    data.bullets.subject &&
+    data.bullets.primary &&
+    data.bullets.backup &&
+    data.quote &&
+    data.quoteAuthor
+  );
+}
+
+function buildIntroHTML(data) {
   return `
-<h2>${data.mascotAdj} ${data.mascotAnimal}</h2>
-<figure>
+  <h2>${data.mascotAdj} ${data.mascotAnimal}</h2>
+
+  <figure>
   <img src="${data.picture}" alt="User uploaded image">
   <figcaption>${data.caption}</figcaption>
-</figure>
+  </figure>
 
-<p>${data.personalStatement}</p>
+  <p>${data.personalStatement}</p>
 
-<ul>
-  <li><strong>Personal Background:</strong> ${data.bullets.personal}</li>
-  <li><strong>Professional Background:</strong> ${data.bullets.professional}</li>
-  <li><strong>Academic Background:</strong> ${data.bullets.academic}</li>
-  <li><strong>Background in this Subject:</strong> ${data.bullets.subject}</li>
-  <li><strong>Primary Work Computer:</strong> ${data.bullets.primary}</li>
-  <li><strong>Backup Work Computer & Location Plan:</strong> ${data.bullets.backup}</li>
+  <ul>
+  <li><b>Personal Background:</b> ${data.bullets.personal}</li>
+  <li><b>Professional Background:</b> ${data.bullets.professional}</li>
+  <li><b>Academic Background:</b> ${data.bullets.academic}</li>
+  <li><b>Background in this Subject:</b> ${data.bullets.subject}</li>
+  <li><b>Primary Work Computer:</b> ${data.bullets.primary}</li>
+  <li><b>Backup Work Computer & Location Plan:</b> ${data.bullets.backup}</li>
 
-  <li><strong>Courses I'm Taking, & Why:</strong>
-    <ul>
-      ${data.courses
-        .map(
-          (c) =>
-            `<li><strong>${c.dept} ${c.num} - ${c.name}:</strong> ${c.reason}</li>`
-        )
-        .join("")}
+  <li><b>Courses I'm Taking, & Why:</b>
+  <ul>
+  ${data.courses
+    .map(
+      (c) =>
+      `<li><b>${c.dept} ${c.num} - ${c.name}:</b> ${c.reason}</li>`
+    )
+    .join("")}
     </ul>
-  </li>
+    </li>
 
-  ${
-    data.funny
-      ? `<li><strong>Funny/Interesting item to remember me by:</strong> ${data.funny}</li>`
-      : ""
-  }
+    ${data.funny ? `<li><b>Funny/Interesting item to remember me by:</b> ${data.funny}</li>` : ""}
+    ${data.share ? `<li><b>I’d also like to share:</b> ${data.share}</li>` : ""}
+    </ul>
 
-  ${
-    data.share
-      ? `<li><strong>I’d also like to share:</strong> ${data.share}</li>`
-      : ""
-  }
-</ul>
+    <blockquote>
+    “${data.quote}”<br> - ${data.quoteAuthor}
+    </blockquote>
 
-<blockquote>
-  “${data.quote}”<br> - ${data.quoteAuthor}
-</blockquote>
-
-<footer>
-  ${data.links.map((l) => `<a href="${l}">${l}</a>`).join("\n  ")}
-</footer>
-`;
+    <footer>
+    ${data.links.map((l) => `<a href="${l}">${l}</a>`).join("")}
+    </footer>
+    `;
 }
 
-// -------------------------------
-// ESCAPE HTML FOR DISPLAY
-// -------------------------------
-function escapeHTML(str) {
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;");
-}
+// ===============================
+// EVENT LISTENERS AFTER FUNCTIONS
+// ===============================
+
+const form = document.getElementById("intro-form");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  generateIntroduction();
+});
+
+document.getElementById("clear-button").addEventListener("click", () => {
+  const inputs = form.querySelectorAll("input, textarea");
+  inputs.forEach((el) => (el.value = ""));
+});
+
+document.getElementById("add-course").addEventListener("click", () => {
+  const container = document.getElementById("courses-container");
+
+  const div = document.createElement("div");
+  div.classList.add("course");
+
+  div.innerHTML = `
+  <label>Department:
+  <input type="text" name="course_dept" placeholder="ITIS">
+  </label>
+  <label>Number:
+  <input type="text" name="course_num" placeholder="3135">
+  </label>
+  <label>Name:
+  <input type="text" name="course_name" placeholder="Course Name">
+  </label>
+  <label>Reason:
+  <input type="text" name="course_reason" placeholder="Reason for taking">
+  </label>
+  <button type="button" class="delete-course">Delete</button>
+  `;
+
+  container.appendChild(div);
+
+  div.querySelector(".delete-course").addEventListener("click", () => {
+    div.remove();
+  });
+});

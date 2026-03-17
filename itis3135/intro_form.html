@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/default.css">
 
-    <!-- Highlight.js (for HTML/JSON output later) -->
+    <!-- Highlight.js -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
   </head>
@@ -28,51 +28,43 @@
 
         <!-- NAME FIELDS -->
         <label>First Name:
-          <input type="text" name="first_name" required
-                 value="Amir" placeholder="Enter first name">
+          <input type="text" name="first_name" required value="Amir">
         </label>
 
         <label>Middle Name / Initial (optional):
-          <input type="text" name="middle_name"
-                 value="J" placeholder="Enter middle name or initial">
+          <input type="text" name="middle_name" value="J">
         </label>
 
         <label>Nickname / Preferred Name (optional):
-          <input type="text" name="preferred_name"
-                 placeholder="Enter nickname">
+          <input type="text" name="preferred_name">
         </label>
 
         <label>Last Name:
-          <input type="text" name="last_name" required
-                 value="Homsi" placeholder="Enter last name">
+          <input type="text" name="last_name" required value="Homsi">
         </label>
 
         <!-- ACKNOWLEDGMENT -->
         <label>Acknowledgment Statement:
           <input type="text" name="ack_statement" required
-                 value="I understand that what I put here is publicly available on the web and I won't put anything here I don't want the public to see"
-                 placeholder="Enter acknowledgment statement">
+                 value="I understand that what I put here is publicly available on the web and I won't put anything here I don't want the public to see">
         </label>
 
         <label>Acknowledgment Date:
-          <input type="date" name="ack_date" required
-                 value="2026-01-12">
+          <input type="date" name="ack_date" required value="2026-01-12" aria-describedby="date-note">
         </label>
+        <small id="date-note">If your browser does not support date inputs, enter as YYYY-MM-DD.</small>
 
         <!-- MASCOT -->
         <label>Mascot Adjective:
-          <input type="text" name="mascot_adj" required
-                 value="Ascended" placeholder="Enter adjective">
+          <input type="text" name="mascot_adj" required value="Ascended">
         </label>
 
         <label>Mascot Animal:
-          <input type="text" name="mascot_animal" required
-                 value="Human" placeholder="Enter animal">
+          <input type="text" name="mascot_animal" required value="Human">
         </label>
 
         <label>Divider:
-          <input type="text" name="divider" required
-                 value="|" placeholder="Enter divider symbol">
+          <input type="text" name="divider" required value="|">
         </label>
 
         <!-- IMAGE -->
@@ -82,17 +74,15 @@
 
         <label>Picture Caption:
           <input type="text" name="picture_caption" required
-                 value="&quot;This is the LockPickingLawyer and today-&quot;"
-                 placeholder="Enter caption">
+                 value="&quot;This is the LockPickingLawyer and today-&quot;">
         </label>
 
         <!-- PERSONAL STATEMENT -->
         <label>Personal Statement:
-          <textarea name="personal_statement" required
-            placeholder="Enter personal statement">I’m a Sophomore (junior by credits!) at UNC Charlotte studying Computer Science with a focus in Systems and Networks. Can’t wait to learn more about computers in general, and in this class specifically web development.</textarea>
+          <textarea name="personal_statement" required>I’m a Sophomore (junior by credits!) at UNC Charlotte studying Computer Science with a focus in Systems and Networks. Can’t wait to learn more about computers in general, and in this class specifically web development.</textarea>
         </label>
 
-        <!-- 7 BULLETS -->
+        <!-- BULLETS -->
         <label>Personal Background:
           <textarea name="personal_background" required>I’m 19 and I’ve been tinkering with technology almost as far back as I can remember.</textarea>
         </label>
@@ -121,7 +111,6 @@
         <h3>Courses</h3>
         <div id="courses-container">
 
-          <!-- Course Template (prefilled) -->
           <div class="course">
             <label>Department:
               <input type="text" name="course_dept" value="ITSC">
@@ -133,8 +122,7 @@
               <input type="text" name="course_name" value="Introduction to Computer Systems">
             </label>
             <label>Reason:
-              <input type="text" name="course_reason"
-                     value="Requirement, hyper relevant to my concentration.">
+              <input type="text" name="course_reason" value="Requirement, hyper relevant to my concentration.">
             </label>
           </div>
 
@@ -149,8 +137,7 @@
               <input type="text" name="course_name" value="Computers & Their Impact on Society">
             </label>
             <label>Reason:
-              <input type="text" name="course_reason"
-                     value="Required and interesting.">
+              <input type="text" name="course_reason" value="Required and interesting.">
             </label>
           </div>
 
@@ -165,8 +152,7 @@
               <input type="text" name="course_name" value="Front-End Web Application Development">
             </label>
             <label>Reason:
-              <input type="text" name="course_reason"
-                     value="It would be good to know web dev better.">
+              <input type="text" name="course_reason" value="It would be good to know web dev better.">
             </label>
           </div>
 
@@ -181,8 +167,7 @@
               <input type="text" name="course_name" value="Technical Interview Preparation 101">
             </label>
             <label>Reason:
-              <input type="text" name="course_reason"
-                     value="Credit filler but hopefully useful.">
+              <input type="text" name="course_reason" value="Credit filler but hopefully useful.">
             </label>
           </div>
 
@@ -197,8 +182,7 @@
               <input type="text" name="course_name" value="Matrices & Linear Algebra">
             </label>
             <label>Reason:
-              <input type="text" name="course_reason"
-                     value="Required course. Math is my weak point!">
+              <input type="text" name="course_reason" value="Required course. Math is my weak point!">
             </label>
           </div>
 
@@ -208,54 +192,44 @@
 
         <!-- QUOTE -->
         <label>Quote:
-          <input type="text" name="quote" required
-                 value="Don’t believe everything you read on the internet">
+          <input type="text" name="quote" required value="Don’t believe everything you read on the internet">
         </label>
 
         <label>Quote Author:
-          <input type="text" name="quote_author" required
-                 value="Abraham D. Lincoln">
+          <input type="text" name="quote_author" required value="Abraham D. Lincoln">
         </label>
 
-        <!-- OPTIONAL FIELDS -->
+        <!-- OPTIONAL -->
         <label>Funny Thing (optional):
-          <input type="text" name="funny"
-                 value="I ask and comment in class a lot.">
+          <input type="text" name="funny" value="I ask and comment in class a lot.">
         </label>
 
         <label>Something to Share (optional):
-          <input type="text" name="share"
-                 value="I was born in New Jersey. All bread is MILES better up there.">
+          <input type="text" name="share" value="I was born in New Jersey. All bread is MILES better up there.">
         </label>
 
         <!-- LINKS -->
         <h3>Links</h3>
 
-<label>CLT Web (webpages.charlotte.edu/username):
-  <input type="url" name="link1" required
-         value="https://webpages.charlotte.edu/ahomsi/">
-</label>
+        <label>CLT Web (webpages.charlotte.edu/username):
+          <input type="url" name="link1" required value="https://webpages.charlotte.edu/ahomsi/">
+        </label>
 
-<label>GitHub.io (username.github.io):
-  <input type="url" name="link2" required
-         value="https://Amir-Janid-Homsi.github.io/">
-</label>
+        <label>GitHub.io (username.github.io):
+          <input type="url" name="link2" required value="https://Amir-Janid-Homsi.github.io/">
+        </label>
 
-<label>GitHub (github.com/username):
-  <input type="url" name="link3" required
-         value="https://github.com/Amir-Janid-Homsi">
-</label>
+        <label>GitHub (github.com/username):
+          <input type="url" name="link3" required value="https://github.com/Amir-Janid-Homsi">
+        </label>
 
-<label>freeCodeCamp (freecodecamp.org/username):
-  <input type="url" name="link4" required
-         value="https://www.freecodecamp.org/ahomsi">
-</label>
+        <label>freeCodeCamp (freecodecamp.org/username):
+          <input type="url" name="link4" required value="https://www.freecodecamp.org/ahomsi">
+        </label>
 
-<label>LinkedIn (linkedin.com/in/username/):
-  <input type="url" name="link5" required
-         value="https://www.linkedin.com/in/amir-homsi-8b2623341/">
-</label>
-
+        <label>LinkedIn (linkedin.com/in/username/):
+          <input type="url" name="link5" required value="https://www.linkedin.com/in/amir-homsi-8b2623341/">
+        </label>
 
       </form>
 
@@ -284,6 +258,9 @@
 
     <!-- Highlight.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <!-- Accumulus Autograder -->
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
   </body>
 </html>
