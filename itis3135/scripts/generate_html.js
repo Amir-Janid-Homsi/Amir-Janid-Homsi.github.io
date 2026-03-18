@@ -1,5 +1,3 @@
-const form = document.getElementById("intro-form");
-
 // ===============================
 // ESCAPE FUNCTION (required)
 // ===============================
