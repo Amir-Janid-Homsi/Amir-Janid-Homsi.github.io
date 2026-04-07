@@ -54,6 +54,16 @@ main {
     padding: 30px;
     max-width: 900px;
 }
+/* Brighter WCAG‑AA compliant links for main content (Resources page) */
+main a {
+    color: #a6e3ff;
+    font-weight: 500;
+}
+
+main a:hover {
+    color: #d6f4ff;
+}
+
 
 /* Header + Footer — FIXED */
 header {
