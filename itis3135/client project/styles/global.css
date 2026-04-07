@@ -19,7 +19,6 @@ body {
     font-family: "Inter", sans-serif;
     background: var(--base);
     color: var(--text);
-    display: flex;
     min-height: 100vh;
 }
 
@@ -36,7 +35,6 @@ body {
 .sidebar-inner {
   padding: 20px;
 }
-
 
 .sidebar a {
     display: block;
@@ -57,9 +55,20 @@ main {
     max-width: 900px;
 }
 
-/* Header + Footer */
-header, footer {
+/* Header + Footer — FIXED */
+header {
+    margin-left: 260px;   /* move header out from under sidebar */
     padding: 10px 0;
+    color: var(--subtle);
+    position: relative;
+    z-index: 10;          /* ensure header appears above sidebar */
+}
+
+footer {
+    margin-left: 260px;   /* align footer with main content */
+    width: calc(100% - 260px);
+    text-align: center;
+    padding: 20px 0;
     color: var(--subtle);
 }
 
@@ -84,26 +93,26 @@ pre code {
     display: block;
     background: #1e1e1e; /* VS Code dark */
 }
+
 /* PythonTutor Editor Mask */
 .pt-editor-mask {
-    width: 900px;          /* match your main content width */
-    height: 350px;         /* only show the editor area */
-    overflow: hidden;      /* hide the rest of the UI */
+    width: 900px;
+    height: 350px;
+    overflow: hidden;
     border: 1px solid var(--overlay);
     margin: 20px 0;
     position: relative;
 }
 
-/* Shift the iframe upward to crop out the top UI */
 .pt-editor-frame {
     width: 900px;
-    height: 900px;         /* large so we can shift it */
+    height: 900px;
     border: none;
     position: absolute;
-    top: -180px;           /* adjust until the editor is perfectly visible */
+    top: -180px;
     left: 0;
-    overflow: hidden;       /* NEW */
-    pointer-events: auto;  /* still lets user type */
+    overflow: hidden;
+    pointer-events: auto;
     overscroll-behavior: contain;
     touch-action: none;
 }
