@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn C Fast — Memory Allocation</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="scripts/global.js" defer></script>
+</head>
+
+<body>
+
+<div data-include="components/header.html"></div>
+<div data-include="components/sidebar.html"></div>
+
+<main>
+<h2>Memory Allocation</h2>
+
+<p>
+C gives you manual control over memory using <code>malloc</code>, <code>calloc</code>, <code>realloc</code>, and <code>free</code>. This is powerful — and dangerous if misused — but it allows you to build flexible data structures.
+</p>
+
+<h3>malloc()</h3>
+
+<p>
+<code>malloc</code> allocates a block of memory and returns a pointer to it.
+</p>
+
+<pre><code class="language-c">
+int *arr = malloc(5 * sizeof(int));
+if (!arr) {
+    printf("Allocation failed!\\n");
+    return 1;
+}
+</code></pre>
+
+<h3>Using the Memory</h3>
+
+<pre><code class="language-c">
+for (int i = 0; i &lt; 5; i++) {
+    arr[i] = i * 10;
+}
+</code></pre>
+
+<h3>Freeing Memory</h3>
+
+<pre><code class="language-c">
+free(arr);
+</code></pre>
+
+<h3>Common Mistakes</h3>
+
+<ul>
+  <li>Forgetting to free memory → memory leak</li>
+  <li>Freeing memory twice → undefined behavior</li>
+  <li>Using memory after freeing it → use-after-free bug</li>
+  <li>Allocating the wrong size → buffer overflow</li>
+</ul>
+
+<p>
+Mastering dynamic memory is essential for real-world C programming.
+</p>
+</main>
+
+<div data-include="components/footer.html"></div>
+
+<script src="scripts/HTMLInclude.min.js"></script>
+<script>HTMLInclude();</script>
+
+<!-- Autograder -->
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>

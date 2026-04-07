@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn C Fast — Basic Syntax</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="scripts/global.js" defer></script>
+</head>
+
+<body>
+
+<div data-include="components/header.html"></div>
+<div data-include="components/sidebar.html"></div>
+
+<main>
+<h2>Basic Syntax</h2>
+
+<p>
+Before diving into pointers and memory, you need to understand the basic structure of a C program. C is small, fast, and minimal — which means you write more code yourself, but you also gain more control.
+</p>
+
+<h3>Program Structure</h3>
+
+<p>
+Every C program starts with a <code>main()</code> function. This is where execution begins.
+</p>
+
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int main() {
+    printf("Hello, world!\\n");
+    return 0;
+}
+</code></pre>
+
+<h3>Variables & Types</h3>
+
+<p>
+C is statically typed, meaning every variable has a type known at compile time.
+</p>
+
+<pre><code class="language-c">
+int age = 20;
+float gpa = 3.7;
+char letter = 'A';
+</code></pre>
+
+<h3>Control Flow</h3>
+
+<p>
+C includes familiar control structures like <code>if</code>, <code>while</code>, and <code>for</code>.
+</p>
+
+<pre><code class="language-c">
+for (int i = 0; i &lt; 5; i++) {
+    printf("i = %d\\n", i);
+}
+</code></pre>
+
+<p>
+These basics form the foundation for everything else in C.
+</p>
+
+</main>
+
+<div data-include="components/footer.html"></div>
+
+<script src="scripts/HTMLInclude.min.js"></script>
+<script>HTMLInclude();</script>
+
+<!-- Autograder -->
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>

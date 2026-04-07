@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn C Fast — Resources &amp; Glossary</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="scripts/global.js" defer></script>
+</head>
+
+
+<body>
+
+<div data-include="components/header.html"></div>
+<div data-include="components/sidebar.html"></div>
+
+<main>
+<h2>Resources &amp; Glossary</h2>
+
+<h3>Glossary</h3>
+
+<div class="glossary-term">Pointer</div>
+<div class="glossary-definition">
+  A variable that stores the memory address of another variable.
+</div>
+
+<div class="glossary-term">Dereference</div>
+<div class="glossary-definition">
+  Accessing the value stored at the memory address a pointer refers to.
+</div>
+
+<div class="glossary-term">Heap</div>
+<div class="glossary-definition">
+  Memory used for dynamic allocation via malloc/calloc/realloc.
+</div>
+
+<div class="glossary-term">Stack</div>
+<div class="glossary-definition">
+  Memory used for function calls, local variables, and return addresses.
+</div>
+
+<div class="glossary-term">Segmentation Fault</div>
+<div class="glossary-definition">
+  A crash caused by accessing invalid memory (e.g., null pointer dereference).
+</div>
+
+<h3>External Resources</h3>
+
+<ul>
+  <li><a href="https://pythontutor.com/c.html" target="_blank">PythonTutor C Visualizer</a></li>
+  <li><a href="https://cplusplus.com/reference/clibrary/" target="_blank">C Standard Library Reference</a></li>
+  <li><a href="https://www.learn-c.org/" target="_blank">Learn‑C.org Interactive Tutorials</a></li>
+</ul>
+
+<h3>Interactive C Visualizer (PythonTutor)</h3>
+
+<p>
+This embedded tool lets you step through C code line‑by‑line and see how variables and memory change as the program runs.
+</p>
+
+<div class="pt-editor-mask">
+  <iframe 
+    src="https://pythontutor.com/c.html#mode=edit"
+    class="pt-editor-frame">
+  </iframe>
+</div>
+
+
+</main>
+
+<div data-include="components/footer.html"></div>
+
+<script src="scripts/HTMLInclude.min.js"></script>
+<script>HTMLInclude();</script>
+
+<!-- Autograder -->
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>

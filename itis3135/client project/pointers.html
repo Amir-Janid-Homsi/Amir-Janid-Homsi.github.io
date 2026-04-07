@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn C Fast — Pointers</title>
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script src="scripts/global.js" defer></script>
+</head>
+
+<body>
+
+<div data-include="components/header.html"></div>
+<div data-include="components/sidebar.html"></div>
+
+<main>
+ <h2>Pointers</h2>
+
+<p>
+Pointers are variables that store memory addresses. They allow you to work directly with memory, pass large data efficiently, and build complex structures like linked lists and trees.
+</p>
+
+<h3>Pointer Basics</h3>
+
+<pre><code class="language-c">
+int x = 5;
+int *p = &amp;x;
+
+printf("x = %d\\n", x);
+printf("p points to address %p\\n", p);
+printf("*p dereferences to %d\\n", *p);
+</code></pre>
+
+
+<h3>Interactive Pointer Diagram</h3>
+
+<p>
+Below is a simple visualization showing how a pointer references a variable in memory.
+</p>
+
+<canvas id="pointerCanvas" width="420" height="140"></canvas>
+<script>drawPointerExample();</script>
+
+<h3>Why Pointers Matter</h3>
+
+<ul>
+  <li>They allow efficient passing of large data structures</li>
+  <li>They enable dynamic memory allocation</li>
+  <li>They are required for strings, arrays, and function pointers</li>
+  <li>They help you understand how memory actually works</li>
+</ul>
+
+<p>
+Pointers are challenging at first, but once you understand them, C becomes far more powerful.
+</p>
+
+</main>
+
+<div data-include="components/footer.html"></div>
+
+<script src="scripts/HTMLInclude.min.js"></script>
+<script>HTMLInclude();</script>
+
+<!-- Autograder -->
+<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+/* Rosé Pine Palette */
+:root {
+    --base: #191724;
+    --surface: #1f1d2e;
+    --overlay: #26233a;
+    --text: #e0def4;
+    --subtle: #908caa;
+    --love: #eb6f92;
+    --gold: #f6c177;
+    --rose: #ebbcba;
+    --pine: #31748f;
+    --foam: #9ccfd8;
+    --iris: #c4a7e7;
+}
+
+/* Global Reset */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: var(--base);
+    color: var(--text);
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 240px;
+  background: var(--surface);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.sidebar-inner {
+  padding: 20px;
+}
+
+
+.sidebar a {
+    display: block;
+    padding: 10px 0;
+    color: var(--foam);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    color: var(--rose);
+}
+
+/* Main Content */
+main {
+    margin-left: 260px;
+    padding: 30px;
+    max-width: 900px;
+}
+
+/* Header + Footer */
+header, footer {
+    padding: 10px 0;
+    color: var(--subtle);
+}
+
+/* Glossary Accordion */
+.glossary-term {
+    background: var(--overlay);
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.glossary-definition {
+    display: none;
+    padding: 10px;
+    background: var(--surface);
+}
+
+/* Code Blocks */
+pre code {
+    border-radius: 6px;
+    padding: 12px;
+    display: block;
+    background: #1e1e1e; /* VS Code dark */
+}
+/* PythonTutor Editor Mask */
+.pt-editor-mask {
+    width: 900px;          /* match your main content width */
+    height: 350px;         /* only show the editor area */
+    overflow: hidden;      /* hide the rest of the UI */
+    border: 1px solid var(--overlay);
+    margin: 20px 0;
+    position: relative;
+}
+
+/* Shift the iframe upward to crop out the top UI */
+.pt-editor-frame {
+    width: 900px;
+    height: 900px;         /* large so we can shift it */
+    border: none;
+    position: absolute;
+    top: -180px;           /* adjust until the editor is perfectly visible */
+    left: 0;
+    overflow: hidden;       /* NEW */
+    pointer-events: auto;  /* still lets user type */
+    overscroll-behavior: contain;
+    touch-action: none;
+}
