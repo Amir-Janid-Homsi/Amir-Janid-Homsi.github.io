@@ -1,0 +1,128 @@
+/* Rosé Pine Palette */
+:root {
+    --base: #191724;
+    --surface: #1f1d2e;
+    --overlay: #26233a;
+    --text: #e0def4;
+    --subtle: #908caa;
+    --love: #eb6f92;
+    --gold: #f6c177;
+    --rose: #ebbcba;
+    --pine: #31748f;
+    --foam: #9ccfd8;
+    --iris: #c4a7e7;
+}
+
+/* Global Reset */
+body {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    background: var(--base);
+    color: var(--text);
+    min-height: 100vh;
+}
+
+/* Sidebar Navigation */
+.sidebar {
+  width: 240px;
+  background: var(--surface);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.sidebar-inner {
+  padding: 20px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px 0;
+    color: var(--foam);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    color: var(--rose);
+}
+
+/* Main Content */
+main {
+    margin-left: 260px;
+    padding: 30px;
+    max-width: 900px;
+}
+/* Brighter WCAG‑AA compliant links for main content (Resources page) */
+main a {
+    color: #a6e3ff;
+    font-weight: 500;
+}
+
+main a:hover {
+    color: #d6f4ff;
+}
+
+
+/* Header + Footer — FIXED */
+header {
+    margin-left: 260px;   /* move header out from under sidebar */
+    padding: 10px 0;
+    color: var(--subtle);
+    position: relative;
+    z-index: 10;          /* ensure header appears above sidebar */
+}
+
+footer {
+    margin-left: 260px;   /* align footer with main content */
+    width: calc(100% - 260px);
+    text-align: center;
+    padding: 20px 0;
+    color: var(--subtle);
+}
+
+/* Glossary Accordion */
+.glossary-term {
+    background: var(--overlay);
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+.glossary-definition {
+    display: none;
+    padding: 10px;
+    background: var(--surface);
+}
+
+/* Code Blocks */
+pre code {
+    border-radius: 6px;
+    padding: 12px;
+    display: block;
+    background: #1e1e1e; /* VS Code dark */
+}
+
+/* PythonTutor Editor Mask */
+.pt-editor-mask {
+    width: 900px;
+    height: 350px;
+    overflow: hidden;
+    border: 1px solid var(--overlay);
+    margin: 20px 0;
+    position: relative;
+}
+
+.pt-editor-frame {
+    width: 900px;
+    height: 900px;
+    border: none;
+    position: absolute;
+    top: -180px;
+    left: 0;
+    overflow: hidden;
+    pointer-events: auto;
+    overscroll-behavior: contain;
+    touch-action: none;
+}
