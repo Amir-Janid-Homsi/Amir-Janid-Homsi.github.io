@@ -43,3 +43,6 @@ function runCode() {
 
   output.textContent = "This is a read-only demo.\n\nYour code:\n" + input;
 }
+document.addEventListener("HTMLIncludeLoaded", () => {
+  drawPointerExample();
+});
